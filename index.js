@@ -1,7 +1,21 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function reverseString(word){
+  const wordArray = word.split("")
+  const reverseArray = wordArray.reverse()
+  const reversedWord = reverseArray.join("")
+    return reversedWord;
 }
 
+
+function isPalindrome(word) {
+  const reversedWord = reverseString(word);
+  if (word === reversedWord){
+    return true;
+  } else {
+    return false;
+  }
+}
+// Need to create an isPalindrome function to have return coming back either true or false.
+// When input string is same forward and backwards, it should run true. Sames goes  if if input string is the same after it is reversed.
 /* 
   Add your pseudocode here
 */
